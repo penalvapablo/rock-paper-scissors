@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gradient{
+  padding: 1.7rem;
+  height: 100vh;
+  background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header */
+.header{
+  margin: .7rem;
+  padding: .6rem;
+  height: 6rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 8px;
+}
+.header__title{
+  margin: 1rem;
+  font-size: 1.25rem;
+  width: 30%;
+  line-height: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+}
+.haeder__scoreBox{
+  width: 30%;
+  padding: .5rem;
+  background-color: #fafafa;
+  height: 100%;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.header__scoreBox__title{
+  width: 100%;
+  text-align: center;
+  vertical-align: bottom;
+  letter-spacing: 1px;
+  height: 30%;
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: hsl(229, 64%, 46%)
+}
+.header__scoreBox__score{
+  height: 70%;
+  color: hsl(229, 25%, 31%);
+  font-size: 2.8rem;
+  line-height: 2.3rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* GAME */
+.game{
+  margin: 10rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* RULES */
+.rules__btn{
+  background-color: transparent;
+  color: #fafafa;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #fafafa;
+  border-radius: 8px ;
+
 }
