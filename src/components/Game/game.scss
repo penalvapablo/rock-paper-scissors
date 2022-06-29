@@ -1,0 +1,139 @@
+/* GAME */
+.game {
+  width: 300px;
+  height: 400px;
+  margin: 4rem auto 0;
+  position: relative;
+  z-index: 0;
+}
+
+.game__topTriangle {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.game__bottomTriangle {
+  display: block;
+  margin: 1rem auto 0;
+}
+
+.triangle {
+  position: absolute;
+  height: 170px;
+  left: 0;
+  right: 0;
+  top: 15%;
+  z-index: -1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.icon {
+  height: 7.7rem;
+  width: 7.7rem;
+  background-color: #fafafa;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 3rem;
+  &__paper {
+    background-image: url('../../images/icon-paper.svg');
+    border: 12px hsl(230, 89%, 62%) solid;
+    box-shadow: inset 0px 5px rgb(215, 213, 213), 0px 6px hsl(230, 54%, 44%);
+    transition: box-shadow 3s
+  }
+  &__scissors {
+    background-image: url('../../images/icon-scissors.svg');
+    border: 12px hsl(39, 89%, 49%) solid;
+    box-shadow: inset 0px 5px rgb(215, 213, 213), 0px 6px hsl(40, 77%, 37%);
+    transition: box-shadow 3s
+  }
+  &__rock {
+    background-image: url('../../images/icon-rock.svg');
+    border: 12px hsl(349, 70%, 56%) solid;
+    box-shadow: inset 0px 5px rgb(215, 213, 213), 0px 6px hsl(349, 56%, 36%);
+    transition: box-shadow 3s
+  }
+}
+
+.emptySpace {
+  background-color: #121d32;
+  z-index: 1;
+}
+
+/* GAME SELECTION */
+.game__selection {
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fix {
+  margin-left: 10px;
+}
+
+.game__selection__title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+/* WINNER */
+.winner {
+  box-shadow:
+    0 0 0 15px hsl(0, 0%, 90%, .07),
+    0 0 0 40px hsl(0, 0%, 90%, .05),
+    0 0 0 70px hsl(0, 0%, 90%, .03);
+  transition: box-shadow 3s
+}
+
+@media (min-width: 600px){
+  .game{
+    width: 400px;
+    &__bottomTriangle{
+      margin-top: 3rem;
+    }
+  }
+  .triangle {
+    position: absolute;
+    height: 220px;
+    left: 0;
+    right: 0;
+    top: 20%;
+    z-index: -1;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .icon {
+    height: 10rem;
+    width: 10rem;
+    background-color: #fafafa;
+    border-radius: 50%;  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 4rem;
+    &__paper {
+      border: 20px hsl(230, 89%, 62%) solid;
+      box-shadow: inset 0px 10px rgb(215, 213, 213), 0px 6px hsl(230, 54%, 44%);
+      transition: box-shadow 3s
+    }
+    &__scissors {
+      border: 20px hsl(39, 89%, 49%) solid;
+      box-shadow: inset 0px 10px rgb(215, 213, 213), 0px 6px hsl(40, 77%, 37%);
+      transition: box-shadow 3s
+    }
+    &__rock {
+      border: 20px hsl(349, 70%, 56%) solid;
+      box-shadow: inset 0px 10px rgb(215, 213, 213), 0px 6px hsl(349, 56%, 36%);
+      transition: box-shadow 3s
+    }
+  }
+  .emptySpace {
+    background-color: #121d32;
+    z-index: 1;
+  }
+
+}

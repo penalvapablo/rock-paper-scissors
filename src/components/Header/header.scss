@@ -1,0 +1,97 @@
+.header {
+  margin: 0 auto;
+  padding: 0.6rem;
+  height: 6rem;
+  max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 8px;
+
+  &__title {
+    margin: 1rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    width: 30%;
+    line-height: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  &__scoreBox {
+    width: 30%;
+    padding: 0.5rem;
+    background-color: #fafafa;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__scoreBox__title {
+    width: 100%;
+    text-align: center;
+    vertical-align: bottom;
+    letter-spacing: 1px;
+    height: 30%;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: hsl(229, 64%, 46%);
+  }
+
+  &__scoreBox__score {
+    height: 70%;
+    color: hsl(229, 25%, 31%);
+    font-size: 2.8rem;
+    line-height: 2.3rem;
+  }
+}
+
+
+@media (min-width:600px){
+  .header{
+    max-width: 600px;
+    padding: 1rem;
+    width:600px;
+    height: 150px;
+    border-radius:20px;
+
+    &__title{
+      font-weight: 1000;
+      font-size: 2.2rem;
+      width: 20%;
+      line-height: 2rem;
+    }
+    &__scoreBox {
+      width: 30%;
+      padding: 1rem 1rem 2rem 1rem;
+      background-color: #fafafa;
+      height: 100%;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &__scoreBox__title {
+      width: 100%;
+      text-align: center;
+      vertical-align: bottom;
+      letter-spacing: 1.5px;
+      height: 30%;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      color: hsl(229, 64%, 46%);
+    }
+  
+    &__scoreBox__score {
+      height: 50%;
+      color: hsl(229, 25%, 31%);
+      font-size: 4rem;
+      line-height: 2.3rem;
+    }
+  }
+}
