@@ -92,24 +92,36 @@
 
 @media (min-width: 600px){
   .game{
-    width: 400px;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__topTriangle {
+      width: 450px;
+      // height: 300px;
+    }
     &__bottomTriangle{
-      margin-top: 3rem;
+      margin-top: 20px;
+    }
+    &__selection{
+      height: 100%;
+      width: 600px;
     }
   }
   .triangle {
     position: absolute;
-    height: 220px;
+    height: 300px;
     left: 0;
     right: 0;
     top: 20%;
     z-index: -1;
-    width: 80%;
+    width: 350px;
     margin: 0 auto;
   }
   .icon {
-    height: 10rem;
-    width: 10rem;
+    height: 12rem;
+    width: 12rem;
     background-color: #fafafa;
     border-radius: 50%;  
     background-repeat: no-repeat;
@@ -135,5 +147,42 @@
     background-color: #121d32;
     z-index: 1;
   }
+  .game__selection{
+    height: 350px;
+    flex-direction: column-reverse;
+  }
+  .game__selection__title{
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+  }
+  .game__topTriangle__selection__desktop{
+    justify-content: space-between;
+    width: 100%;
+  }
+  .false{
+    height: 16rem;
+    width: 16rem;
+    background-size: 6rem;
+    border-width: 25px;
+  }
+  .winner{
+    height: 16rem;
+    width: 16rem;
+    background-size: 6rem;
+    border-width: 25px;
+    box-shadow:
+    0 0 0 70px hsl(0, 0%, 90%, .07),
+    0 0 0 140px hsl(0, 0%, 90%, .05),
+    0 0 0 200px hsl(0, 0%, 90%, .03);
+    transition: box-shadow 3s
+  }
+}
 
+@media (min-width:900px){
+  .game{
+    width: 900px;
+    &__selection{
+      width: 320px
+    }
+  }
 }

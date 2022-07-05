@@ -1,6 +1,4 @@
-import paperImg from "../../images/icon-paper.svg";
-import scissorsImg from "../../images/icon-scissors.svg";
-import rockImg from "../../images/icon-rock.svg";
+
 import triangle from "../../images/bg-triangle.svg";
 import { MouseEvent, useRef, useState } from "react";
 import { Game } from "../Game/Game";
@@ -19,7 +17,6 @@ export interface IState {
 }
 
 
-
 export const GameContainer: React.FC = () => {
   const { score, setScore } = useScoreContext()
   const [userSelection, setUserSelection] =
@@ -31,9 +28,6 @@ export const GameContainer: React.FC = () => {
   const paper = 'paper'
   const scissors = 'scissors'
   const rock = 'rock'
-  // const paperRef = useRef<HTMLDivElement>(null);
-  // const scissorsRef = useRef<HTMLDivElement>(null);
-  // const rockRef = useRef<HTMLDivElement>(null);
   const options = [paper, scissors, rock];
 
   function wait(ms = 0) {
@@ -53,7 +47,6 @@ export const GameContainer: React.FC = () => {
     setUserSelection(selected);
     const houseSelection = await houseSelectionFn();
     const result = await gameLogic(selected, houseSelection)
-    // setUserWin(result)
     setScoreFn(result)
     setUserWin(result)
   }
@@ -69,33 +62,11 @@ export const GameContainer: React.FC = () => {
         {!userSelection && (
           <>
             <div className="game__topTriangle">
-              <div id='paper' className="icon icon__paper" onClick={handleSelection}></div>
-              <div id='scissors' className="icon icon__scissors" onClick={handleSelection}></div>
-
-              {/* <img
-                ref={paperRef}
-                src={paperImg}
-                alt="paper"
-                
-                onClick={handleSelection}
-              /> */}
-              {/* <img
-                ref={scissorsRef}
-                src={scissorsImg}
-                alt="scissors"
-                className="icon icon__scissors"
-                onClick={handleSelection}
-              /> */}
+              <div id={paper} className="icon icon__paper" onClick={handleSelection}></div>
+              <div id={scissors} className="icon icon__scissors" onClick={handleSelection}></div>
             </div>
+            <div id={rock} className="icon icon__rock game__bottomTriangle" onClick={handleSelection} ></div>
 
-            <div id="rock" className="icon icon__rock game__bottomTriangle" onClick={handleSelection} ></div>
-            {/* <img
-              ref={rockRef}
-              src={rockImg}
-              alt="rock"
-              className="icon icon__rock game__bottomTriangle"
-              onClick={handleSelection}
-            /> */}
             <img
               src={triangle}
               alt="triangle"

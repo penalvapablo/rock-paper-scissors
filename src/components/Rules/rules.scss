@@ -26,6 +26,7 @@
     height: 1.2rem;
     width: 1.2rem;
     margin: 0 auto;
+
   }
 
   &__active {
@@ -43,7 +44,13 @@
     text-transform: uppercase;
     border: 1px solid #fafafa;
     border-radius: 8px;
+    &:hover {
+      background-color: #fafafa;
+      color: #121d32;
+      cursor: pointer;
+    }
   }
+
   &__desktopContainer{
     display: none;
   }
@@ -76,10 +83,14 @@
       height: 1.2rem;
       width: 1.2rem;
       margin: auto 0;
+      &:hover {
+        cursor: pointer;
+      }
     }
     
     &__close--mobile{
       display: none;
+
     }
     &__btn{
       margin-right: 4%;
@@ -92,9 +103,7 @@
 @media (min-width: 1800px){
   .rules{
     &__btn{
-      // position: absolute;
-      // right: 700px;
-      // bottom: 70px;
+      
     }
   }
 }
