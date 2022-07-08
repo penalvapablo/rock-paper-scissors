@@ -7,7 +7,7 @@ import { Rules } from "./components/Rules/Rules";
 
 
 function App() {
-  console.log(MyScoreContext);
+  // console.log(MyScoreContext);
   const [score, setScore] = useState<number>(0)
   return (
     <MyScoreContext.Provider value={{ score, setScore }}>

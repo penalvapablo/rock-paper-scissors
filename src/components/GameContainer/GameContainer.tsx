@@ -1,6 +1,6 @@
 
 import triangle from "../../images/bg-triangle.svg";
-import { MouseEvent, useRef, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { Game } from "../Game/Game";
 import { GameResult } from "../GameResult/GameResult";
 import { gameLogic } from "../../functions/gameLogic";
