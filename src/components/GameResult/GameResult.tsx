@@ -2,19 +2,20 @@ import { IState as Props } from "../GameContainer/GameContainer";
 import './gameResult.scss'
 
 interface IProps {
-
   setUserSelection: Props['setUserSelection']
   setHouseSelection: Props['setHouseSelection']
   userWin: Props['userWin']
   setUserWin: Props['setUserWin']
+  setRenderResult: Props['setRenderResult']
 }
 
-export const GameResult: React.FC<IProps> = ({ setUserSelection, setHouseSelection, userWin, setUserWin }) => {
+export const GameResult: React.FC<IProps> = ({ setUserSelection, setHouseSelection, userWin, setUserWin, setRenderResult }) => {
 
   const restartGame = () => {
     setUserSelection(null)
     setHouseSelection(null)
     setUserWin(null)
+    setRenderResult(false)
   }
 
   return (

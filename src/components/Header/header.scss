@@ -2,7 +2,7 @@
   margin: 0 auto;
   padding: 0.6rem;
   height: 6rem;
-  max-width: 320px;
+  width: 320px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@
     width: 30%;
     padding: 0.5rem;
     background-color: #fafafa;
-    height: 100%;
+    // height: 100%;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@
     text-align: center;
     vertical-align: bottom;
     letter-spacing: 1px;
-    height: 30%;
+    // height: 30%;
     font-size: 0.8rem;
     text-transform: uppercase;
     color: hsl(229, 64%, 46%);
@@ -48,25 +48,32 @@
     line-height: 2.3rem;
   }
 }
-
-
 @media (min-width:600px){
   .header{
-    max-width: 600px;
+    width: 400px;
+    &__title{
+      width: 25%;
+    }
+  }
+}
+
+@media (min-width:900px){
+  .header{
+    margin-top: 2rem;
+    width: 700px;
     padding: 1rem;
-    width:600px;
     height: 150px;
     border-radius:20px;
 
     &__title{
-      font-weight: 1000;
-      font-size: 2.2rem;
+      // font-weight: 500;
+      font-size: 2rem;
       width: 20%;
-      line-height: 2rem;
+      line-height: 1.8rem;
     }
     &__scoreBox {
-      width: 30%;
-      padding: 1rem 1rem 2rem 1rem;
+      width: 150px;
+      padding: 1rem 1rem 1rem 1rem;
       background-color: #fafafa;
       height: 100%;
       border-radius: 10px;
@@ -79,10 +86,10 @@
     &__scoreBox__title {
       width: 100%;
       text-align: center;
-      vertical-align: bottom;
+      // vertical-align: bottom;
       letter-spacing: 1.5px;
       height: 30%;
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-transform: uppercase;
       color: hsl(229, 64%, 46%);
     }
@@ -90,8 +97,9 @@
     &__scoreBox__score {
       height: 50%;
       color: hsl(229, 25%, 31%);
-      font-size: 4rem;
+      font-size: 3.5rem;
       line-height: 2.3rem;
+      margin-bottom: 10px;
     }
   }
 }

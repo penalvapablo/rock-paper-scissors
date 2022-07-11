@@ -44,6 +44,7 @@
     text-transform: uppercase;
     border: 1px solid #fafafa;
     border-radius: 8px;
+    transition: all .1s ease-in-out;
     &:hover {
       background-color: #fafafa;
       color: #121d32;

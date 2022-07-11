@@ -16,13 +16,16 @@
 }
 
 .result__playAgainBtn {
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: white;
   border: 1px solid white;
   padding: 1rem 4rem;
   border-radius: 8px;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 @media (min-width:900px){

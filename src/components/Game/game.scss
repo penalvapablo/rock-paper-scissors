@@ -41,19 +41,19 @@
     background-image: url('../../images/icon-paper.svg');
     border: 12px hsl(230, 89%, 62%) solid;
     box-shadow: inset 0px 5px rgb(215, 213, 213), 0px 6px hsl(230, 54%, 44%);
-    transition: box-shadow 3s
+    // transition: box-shadow 3s
   }
   &__scissors {
     background-image: url('../../images/icon-scissors.svg');
     border: 12px hsl(39, 89%, 49%) solid;
     box-shadow: inset 0px 5px rgb(215, 213, 213), 0px 6px hsl(40, 77%, 37%);
-    transition: box-shadow 3s
+    // transition: box-shadow 3s
   }
   &__rock {
     background-image: url('../../images/icon-rock.svg');
     border: 12px hsl(349, 70%, 56%) solid;
     box-shadow: inset 0px 5px rgb(215, 213, 213), 0px 6px hsl(349, 56%, 36%);
-    transition: box-shadow 3s
+    // transition: box-shadow 3s
   }
 }
 
@@ -82,15 +82,15 @@
 }
 
 /* WINNER */
-.winner {
-  box-shadow:
-    0 0 0 15px hsl(0, 0%, 90%, .07),
-    0 0 0 40px hsl(0, 0%, 90%, .05),
-    0 0 0 70px hsl(0, 0%, 90%, .03);
-  transition: box-shadow 3s
-}
+// .winner {
+//   box-shadow:
+//   //   0 0 0 15px hsl(0, 0%, 90%, .07),
+//   //   0 0 0 40px hsl(0, 0%, 90%, .05),
+//   //   0 0 0 70px hsl(0, 0%, 90%, .03);
+//   // transition: box-shadow 3s
+// }
 
-@media (min-width: 600px){
+@media (min-width: 900px){
   .game{
     width: 700px;
     height: 500px;
@@ -98,11 +98,11 @@
     flex-direction: column;
     align-items: center;
     &__topTriangle {
-      width: 450px;
+      width: 475px;
       // height: 300px;
     }
     &__bottomTriangle{
-      margin-top: 20px;
+      margin-top: 30px;
     }
     &__selection{
       height: 100%;
@@ -116,7 +116,7 @@
     right: 0;
     top: 20%;
     z-index: -1;
-    width: 350px;
+    width: 325px;
     margin: 0 auto;
   }
   .icon {
@@ -127,20 +127,25 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 4rem;
+    transition: background-size .2s ease-in-out;
     &__paper {
       border: 20px hsl(230, 89%, 62%) solid;
       box-shadow: inset 0px 10px rgb(215, 213, 213), 0px 6px hsl(230, 54%, 44%);
-      transition: box-shadow 3s
+
     }
     &__scissors {
       border: 20px hsl(39, 89%, 49%) solid;
       box-shadow: inset 0px 10px rgb(215, 213, 213), 0px 6px hsl(40, 77%, 37%);
-      transition: box-shadow 3s
+
     }
     &__rock {
       border: 20px hsl(349, 70%, 56%) solid;
       box-shadow: inset 0px 10px rgb(215, 213, 213), 0px 6px hsl(349, 56%, 36%);
-      transition: box-shadow 3s
+
+    }
+    &:hover{
+      cursor: pointer;
+      background-size: 5rem;
     }
   }
   .emptySpace {
@@ -164,18 +169,38 @@
     width: 16rem;
     background-size: 6rem;
     border-width: 25px;
+    &:hover{
+      cursor: unset;
+      background-size: 6rem;
+    }
   }
   .winner{
     height: 16rem;
     width: 16rem;
     background-size: 6rem;
     border-width: 25px;
+    &:hover{
+      cursor: unset;
+      background-size: 6rem;
+    }    
+  }
+  .shadow{
+    position: absolute;
+    height: 16rem;
+    width: 16rem;
+    z-index: -1;
+    border-width: 25px;
+    border-radius: 50%;
+    
+  }
+  .userShadow, .houseShadow{
     box-shadow:
     0 0 0 70px hsl(0, 0%, 90%, .07),
     0 0 0 140px hsl(0, 0%, 90%, .05),
     0 0 0 200px hsl(0, 0%, 90%, .03);
-    transition: box-shadow 3s
+    transition: box-shadow 3s;
   }
+
 }
 
 @media (min-width:900px){

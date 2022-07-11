@@ -14,6 +14,7 @@ export interface IState {
   setHouseSelection: React.Dispatch<React.SetStateAction<string | null>>
   userWin: boolean | null
   setUserWin: React.Dispatch<React.SetStateAction<boolean | null>>
+  setRenderResult: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
@@ -24,6 +25,7 @@ export const GameContainer: React.FC = () => {
   const [houseSelection, setHouseSelection] =
     useState<IState["houseSelection"]>(null);
   const [userWin, setUserWin] = useState<boolean | null>(null)
+  const [renderResult, setRenderResult] = useState<boolean>(false)
 
   const paper = 'paper'
   const scissors = 'scissors'
@@ -34,10 +36,10 @@ export const GameContainer: React.FC = () => {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
+
   const houseSelectionFn = async () => {
     const option = options[Math.floor(Math.random() * 3)];
-    // const selection = option.current
-    await wait(500)
+    await wait(700)
     setHouseSelection(option);
     return option
   };
@@ -45,10 +47,13 @@ export const GameContainer: React.FC = () => {
   const handleSelection = async (e: MouseEvent<HTMLDivElement>) => {
     const selected = e.currentTarget.id;
     setUserSelection(selected);
-    const houseSelection = await houseSelectionFn();
+    const houseSelection = await houseSelectionFn()
     const result = await gameLogic(selected, houseSelection)
-    setScoreFn(result)
     setUserWin(result)
+    await wait(700)
+    setRenderResult(true)
+    setScoreFn(result)
+
   }
 
   const setScoreFn = (result: boolean | null) => {
@@ -81,12 +86,13 @@ export const GameContainer: React.FC = () => {
             userWin={userWin}
           />
         )}
-        {houseSelection && (
+        {renderResult && (
           <GameResult
             setUserSelection={setUserSelection}
             setHouseSelection={setHouseSelection}
             userWin={userWin}
             setUserWin={setUserWin}
+            setRenderResult={setRenderResult}
           />
         )}
 
